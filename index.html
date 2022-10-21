@@ -2,8 +2,59 @@
 <html>
 <head>
 <title>Test Page</title>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script type="text/javascript" src="house_quiz.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<h1>Header</h1>
+<h1>What Hogwarts House are you?</h1>
+
+<div id="questions">	
+<div id="q1" class="question">
+	<p>Q1. What is your favorite color?</p>
+	<input type="radio" id="q1A" name="q1" value="blue">
+	<label for="q1A">Blue</label><br>
+	<input type="radio" id="q1B" name="q1" value="red">
+	<label for="q1B">Red</label><br>
+	<input type="radio" id="q1C" name="q1" value="green">
+	<label for="q1C">Green</label><br>
+	<input type="radio" id="q1D" name="q1" value="yellow">
+	<label for="q1D">Yellow</label><br>
+	<button class="next" onclick="nextQ1()">NEXT</button>
+</div>
+
+<div id="q2" class="question hidden">
+	<p>Q2.What is your favorite animal?</p>
+	<input type="radio" id="q2A" name="q2" value="lion">
+	<label for="q2A">Lion</label><br>
+	<input type="radio" id="q2B" name="q2" value="snake">
+	<label for="q2B">Snake</label><br>
+	<input type="radio" id="q2C" name="q2" value="badger">
+	<label for="q2C">Badger</label><br>
+	<input type="radio" id="q2D" name="q2" value="raven">
+	<label for="q2D">Raven</label><br>
+	<button class="next" onclick="nextQ2()">NEXT</button>
+</div>
+
+<div id="q3" class="question hidden">
+	<p>Q3. How would you describe yourself?</p>
+	<input type="radio" id="q3A" name="q3" value="brave">
+	<label for="q3A">Brave</label><br>
+	<input type="radio" id="q3B" name="q3" value="powerful">
+	<label for="q3B">Powerful</label><br>
+	<input type="radio" id="q3C" name="q3" value="friendly">
+	<label for="q3C">Friendly</label><br>
+	<input type="radio" id="q3D" name="q3" value="intelligent">
+	<label for="q3D">Intelligent</label><br>
+	<button class="next" onclick="nextQ3()">SEE RESULTS</button>
+</div>
+
+<div id="results" class="results hidden">
+	<p>Your house is...</p> <p id="result-display"></p>
+	<br>
+	<button onclick="location.reload()">Try Again</button>
+</div>
+</div>
+
 </body>
 </html>

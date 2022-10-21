@@ -1,0 +1,112 @@
+body {
+	/*background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);*/
+	background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 30px;
+}
+
+@font-face {
+    font-family:"Wizard World";
+    src: url("fonts/WizardWorldSimplified-Kxr7.ttf")
+}
+
+@font-face {
+    font-family:"CormorantGaramond-SemiBold";
+    src: url("fonts/CormorantGaramond-SemiBold.ttf")
+}
+
+@font-face {
+    font-family:"CormorantGaramond-SemiBoldItalic";
+    src: url("fonts/CormorantGaramond-SemiBoldItalic.ttf")
+}
+
+@font-face {
+	font-family: "CormorantGaramond-Bold";
+	src: url("fonts/CormorantGaramond-Bold.tff");
+}
+
+h1 {
+	background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	text-shadow: 2px 2px 8px #b1b1b12b;
+  	font-size: 40px;
+	text-align: center;
+	font-family:'Wizard World', sans-serif;
+}
+
+p {
+	color: #404040;
+	font-family: 'CormorantGaramond-SemiBold', serif;
+}
+
+.question p {
+	font-size: 25px;
+}
+
+#questions{
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #eacda3;
+}
+
+.question {
+	display: block;
+}
+
+.question.hidden {
+	display: none;
+}
+
+.question input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.question label {
+    display: inline-block;
+    padding: 20px 300px;
+    margin: 10px;
+    color: #404040;
+	font-family: 'CormorantGaramond-SemiBoldItalic', serif;
+	font-size: 18px;
+	background: #C9C9C9;
+	background: -webkit-radial-gradient(center, #C9C9C9, #FFFFFF00);
+	background: -moz-radial-gradient(center, #C9C9C9, #FFFFFF00);
+	background: radial-gradient(ellipse at center, #C9C9C9, #FFFFFF00);
+}
+
+.question label:hover {
+  background-color: #e2c194;
+}
+
+.question input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+
+.question input[type="radio"]:checked + label {
+    background-color: #bfb;
+    border-color: #4c4;
+}
+
+.results.hidden {
+	display: none;
+}
+
+button.next {
+	margin: 20px 0 0 10px;
+    padding: 5px 15px;
+    font-family: CormorantGaramond-Bold,serif;
+    font-size: 18px;
+   	border: 1px solid #eccea1;
+   	color: #eccea1;
+   	background: transparent;
+}
+
+button.next:hover {
+	color: #d7b27c;
+	border-color: #d7b27c;
+}
