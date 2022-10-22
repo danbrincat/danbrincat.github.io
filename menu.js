@@ -1,0 +1,2 @@
+const footer = '<div id="footer"> <div class="footer-container"><div> <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy Policy</a> <br> </div> </div>';
+document.getElementById('bottomFooter').innerHTML = footer;

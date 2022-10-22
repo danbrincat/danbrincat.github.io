@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test Page</title>
+<title>What Hogwarts House Are You?</title>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 <script type="text/javascript" src="house_quiz.js"></script>
-<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">	
 </head>
 <body>
+<div id="quizPanel">
 <h1>What Hogwarts House are you?</h1>
 
-<div id="questions">	
-<div id="q1" class="question">
+<div id="questions">
+<div id="startQ" class="question">
+	<button onclick="startQ()" class="next">DISCOVER YOUR HOUSE</button>
+</div>
+
+<div id="q1" class="question hidden">
 	<p>Q1. What is your favorite color?</p>
 	<input type="radio" id="q1A" name="q1" value="blue">
 	<label for="q1A">Blue</label><br>
@@ -49,12 +54,30 @@
 	<button class="next" onclick="nextQ3()">SEE RESULTS</button>
 </div>
 
-<div id="results" class="results hidden">
+<div id="results" class="results hidden checkerboard">
 	<p>Your house is...</p> <p id="result-display"></p>
 	<br>
-	<button onclick="location.reload()">Try Again</button>
+	<p id="descrip-display"></p>
+	<br>
+	<button onclick="location.reload()" class="next">Try Again</button>
 </div>
 </div>
 
+<!--<button onclick="hideTrail()" id="hideTrail">Cursor Off</button>-->
+
+<script type="text/javascript" src="trail.js"></script>
+</div>
+<div id="infoSect">
+	<img width="40%" src="images/illustration-sorting-hat.png">
+	<h2>The Sorting Hat</h2>
+	<p>The Sorting Hat is one of the cleverest enchanted objects most witches and wizards will ever meet. It literally contains the intelligence of the four founders, can speak (through a rip near its brim) and is skilled at Legilimency, which enables it to look into the wearer’s head and divine his or her capabilities or mood.</p>
+	<p>The famous Hogwarts Sorting Hat gives an account of its own genesis in a series of songs sung at the beginning of each school year. Legend has it that the hat once belonged to one of the four founders, Godric Gryffindor, and that it was jointly enchanted by all four founders to ensure that students would be sorted into their eponymous houses, which would be selected according to each founder’s particular preferences in students.</p>
+	<p>The Sorting Hat is one of the cleverest enchanted objects most witches and wizards will ever meet. It literally contains the intelligence of the four founders, can speak (through a rip near its brim) and is skilled at Legilimency, which enables it to look into the wearer’s head and divine his or her capabilities or mood. It can even respond to the thoughts of the wearer.</p>
+	<p>The Sorting Hat is notorious for refusing to admit it has made a mistake in its sorting of a student. On those occasions when Slytherins behave altruistically or selflessly, when Ravenclaws flunk all their exams, when Hufflepuffs prove lazy yet academically gifted and when Gryffindors exhibit cowardice, the Hat steadfastly backs its original decision. On balance, however, the Hat has made remarkably few errors of judgement over the many centuries it has been at work.</p>
+</div>
+
+
+<div id="bottomFooter"></div>
+<script type="text/javascript" src="menu.js"></script>
 </body>
 </html>

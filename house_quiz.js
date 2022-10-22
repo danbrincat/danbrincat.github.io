@@ -6,6 +6,14 @@ sly = 0;
 huf = 0;
 rav = 0;
 
+//start quiz
+function startQ() {
+	var startQ = document.getElementById("startQ");
+	var q1 = document.getElementById("q1");
+	startQ.classList.add("hidden");
+	q1.classList.remove("hidden");
+}
+
 //next q1
 function nextQ1() {
 	var q1 = document.getElementById("q1");
@@ -103,20 +111,30 @@ console.log("Ravenclaw = " + rav);
 console.log("Slytherin = " + sly);
 console.log("Hufflepuff = " + huf);
 
+var chckbrd = document.getElementById("results");
+
 if (grf > rav && grf > sly && grf > huf) {
+	chckbrd.classList.add("grf");
 	result = "GRYFFINDOR";
+	descrip = "You might belong in Gryffindor, Where dwell the brave at heart, Their daring, nerve, and chivalry Set Gryffindors apart";
 } else if (rav > grf && rav > sly && rav > huf) {
+	chckbrd.classList.add("rav");
 	result = "RAVENCLAW"
+	descrip = "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind.";
 } else if (sly > grf && sly > rav && sly > huf) {
+	chckbrd.classList.add("sly");
 	result = "SLYTHERIN";
+	descrip = "Or perhaps in Slytherin, You'll make your real friends, Those cunning folk use any means, To achieve their ends.";
 } else if (huf > grf && huf > rav && huf > sly) {
+	chckbrd.classList.add("huf");
 	result = "HUFFLEPUFF"
+	descrip = "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, And unafraid of toil.";
 } else {
-	result = "Somethings Gone Wrong!"
+	result = "Oh No!";
+	desrip = "Somethings Gone Wrong!";
 };
 
-//result = "This is a test";
-
 document.getElementById("result-display").innerHTML = result;
+document.getElementById("descrip-display").innerHTML = descrip;
 
 }

@@ -4,7 +4,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 30px;
 	font-size: 100%;
 }
 
@@ -25,7 +24,12 @@ body {
 
 @font-face {
 	font-family: "CormorantGaramond-Bold";
-	src: url("fonts/CormorantGaramond-Bold.tff");
+	src: url("fonts/CormorantGaramond-Bold.ttf");
+}
+
+@font-face {
+	font-family: "OptimusPrincepsSemiBold";
+	src: url("fonts/OptimusPrincepsSemiBold.ttf");
 }
 
 h1 {
@@ -41,6 +45,19 @@ h1 {
 p {
 	color: #404040;
 	font-family: 'CormorantGaramond-SemiBold', serif;
+}
+
+#startQ {
+	padding: 200px;
+	background-color: #ffffff00;
+	background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='60' height='30' patternTransform='scale(5) rotate(20)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(43,100%,82.7%,1)'/><path d='M1-6.5v13h28v-13H1zm15 15v13h28v-13H16zm-15 15v13h28v-13H1z'  stroke-width='1' stroke='none' fill='hsla(37,42.4%,53.7%,1)'/><path d='M31-6.5v13h28v-13H31zm-45 15v13h28v-13h-28zm60 0v13h28v-13H46zm-15 15v13h28v-13H31z'  stroke-width='1' stroke='none' fill='hsla(1,60.9%,27.1%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+}
+
+#startQ button {
+	border-width: 5px;
+	font-size: 250%;
+	color: #373737;
+    background: #ffffff9e;
 }
 
 .question p {
@@ -85,16 +102,25 @@ p {
 }
 
 .question input[type="radio"]:focus + label {
-    border: 2px dashed #444;
+    border: 2px dashed #aa7b3c;
 }
 
 .question input[type="radio"]:checked + label {
-    background-color: #bfb;
-    border-color: #4c4;
+    background-color: #e2c194;
+    border-color: #aa7b3c;
 }
 
 .results.hidden {
 	display: none;
+}
+
+#results p {
+	color: #fff;
+}
+
+p#result-display {
+	font-family: OptimusPrincepsSemiBold,serif;
+	font-size: 180%;
 }
 
 button.next {
@@ -110,4 +136,132 @@ button.next {
 button.next:hover {
 	color: #d7b27c;
 	border-color: #d7b27c;
+}
+
+.trail {
+    position: absolute;
+    height: 1px; width: 1px;
+    border-radius: 50px;
+    background: #7989cfb8;
+    border: #d4d7e612 1px solid;
+  }
+
+.checkerboard {
+	background-size: 60px 60px;
+	background-repeat: repeat;
+	padding: 20px 60px;
+}
+
+.checkerboard.grf {
+	background-color: #A02833;
+	background-image: linear-gradient(
+	  45deg,
+	  #642C2F 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #642C2F 75%,
+	  #642C2F
+	),
+	linear-gradient(
+	  -45deg,
+	  #642C2F 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #642C2F 75%,
+	  #642C2F
+	);
+} 
+
+.checkerboard.rav {
+	background-color: #0C4E7E;
+	background-image: linear-gradient(
+	  45deg,
+	  #062C48 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #062C48 75%,
+	  #062C48
+	),
+	linear-gradient(
+	  -45deg,
+	  #062C48 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #062C48 75%,
+	  #062C48
+	);
+}
+
+.checkerboard.sly {
+	background-color: #166845;
+	background-image: linear-gradient(
+	  45deg,
+	  #184837 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #184837 75%,
+	  #184837
+	),
+	linear-gradient(
+	  -45deg,
+	  #184837 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #184837 75%,
+	  #184837
+	);
+}
+
+.checkerboard.huf {
+	background-color: #F8D253;
+	background-image: linear-gradient(
+	  45deg,
+	  #F8a940 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #F8a940 75%,
+	  #F8a940
+	),
+	linear-gradient(
+	  -45deg,
+	  #F8a940 25%,
+	  transparent 25%,
+	  transparent 75%,
+	  #F8a940 75%,
+	  #F8a940
+	);
+}
+
+#quizPanel {
+	padding: 0 30px 30px 30px;
+}
+
+#infoSect {
+	background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+	margin: 0 30px 0 30px;
+	padding: 50px;
+	vertical-align: middle;
+}
+
+#infoSect p {
+	color: #fff;
+}
+
+#infoSect h2 {
+	font-family: OptimusPrincepsSemiBold,serif;
+	color: #eacda3;
+}
+
+#infoSect img {
+	float: left;
+	margin-right: 10px;
+}
+
+#footer {
+	padding: 30px;
+	text-align: center;
+}
+
+#footer a {
+	color: #404040;
 }
