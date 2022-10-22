@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 <title>What Hogwarts House Are You?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 <script type="text/javascript" src="house_quiz.js"></script>
-<link rel="stylesheet" href="style.css" type="text/css">	
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="quizPanel">
 <h1>What Hogwarts House are you?</h1>
 
 <div id="questions">
+	<div id="prog-Bar" class="prog-bar hidden">
+  		<div id="prog"></div>
+	</div>
 <div id="startQ" class="question">
 	<button onclick="startQ()" class="next">DISCOVER YOUR HOUSE</button>
 </div>
 
-<div id="q1" class="question hidden">
+<div id="q1" class="question hidden animate-opacity">
 	<p>Q1. What is your favorite color?</p>
 	<input type="radio" id="q1A" name="q1" value="blue">
 	<label for="q1A">Blue</label><br>
@@ -28,7 +33,7 @@
 	<button class="next" onclick="nextQ1()">NEXT</button>
 </div>
 
-<div id="q2" class="question hidden">
+<div id="q2" class="question hidden animate-opacity">
 	<p>Q2.What is your favorite animal?</p>
 	<input type="radio" id="q2A" name="q2" value="lion">
 	<label for="q2A">Lion</label><br>
@@ -41,7 +46,7 @@
 	<button class="next" onclick="nextQ2()">NEXT</button>
 </div>
 
-<div id="q3" class="question hidden">
+<div id="q3" class="question hidden animate-opacity">
 	<p>Q3. How would you describe yourself?</p>
 	<input type="radio" id="q3A" name="q3" value="brave">
 	<label for="q3A">Brave</label><br>
@@ -54,12 +59,11 @@
 	<button class="next" onclick="nextQ3()">SEE RESULTS</button>
 </div>
 
-<div id="results" class="results hidden checkerboard">
+<div id="results" class="results hidden checkerboard animate-opacity">
 	<p>Your house is...</p> <p id="result-display"></p>
-	<br>
 	<p id="descrip-display"></p>
 	<br>
-	<button onclick="location.reload()" class="next">Try Again</button>
+	<button onclick="location.reload()" class="next">Start Over <span class="fa fa-undo"></span></button>
 </div>
 </div>
 
@@ -68,7 +72,7 @@
 <script type="text/javascript" src="trail.js"></script>
 </div>
 <div id="infoSect">
-	<img width="40%" src="images/illustration-sorting-hat.png">
+	<img src="images/illustration-sorting-hat.png">
 	<h2>The Sorting Hat</h2>
 	<p>The Sorting Hat is one of the cleverest enchanted objects most witches and wizards will ever meet. It literally contains the intelligence of the four founders, can speak (through a rip near its brim) and is skilled at Legilimency, which enables it to look into the wearer’s head and divine his or her capabilities or mood.</p>
 	<p>The famous Hogwarts Sorting Hat gives an account of its own genesis in a series of songs sung at the beginning of each school year. Legend has it that the hat once belonged to one of the four founders, Godric Gryffindor, and that it was jointly enchanted by all four founders to ensure that students would be sorted into their eponymous houses, which would be selected according to each founder’s particular preferences in students.</p>
