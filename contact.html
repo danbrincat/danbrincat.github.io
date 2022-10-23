@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="menu.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="topMenu"></div>
+<div id="main-content">
+  <h1>Contact</h1>
+  <div class="featured-info" style="margin: 0;">
+    <div class="col">
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScA8ZzQMYd43AmMnvqcgIJvb5CqEQMaFhinwW9iJElENyjVJg/formResponse">
+        <input type="text" name="entry.346747668" placeholder="Name" required><br>
+        <input type="email" name="entry.745765254" placeholder="Email" required><br>
+        <textarea type="text" name="entry.1736339133" placeholder="Your Message Here..." required></textarea><br>
+        <div id="privacy-policy">
+	        <div style="width: 10%; display: inline-flex; vertical-align: middle;">
+	          <input type="checkbox" required>
+	        </div>
+	        <div style="width: 85%; display: inline-flex; vertical-align: middle;">
+		        <p>Please tick this box to approve you agree to our <a href="#">privacy policy</a>.</p><br>
+        	</div>
+        <button class="g-recaptcha" 
+        data-sitekey="6Lcx83ccAAAAAD_07gOErI3ADLJMJcHDWtrT_JnR" 
+        data-callback='onSubmit' 
+        data-action='submit'>SUBMIT</button>
+      </form>
+      <p style="font-style: italic; font-size: 14px; color: #b2b2b2; text-align: center;">* We aim to respond to your messages as quickly as possible.</p>
+    </div>
+    <!--<div>
+      <h2>About Us</h2>
+      <p>....</p>
+    </div>-->
+  </div>
+</div>
+
+<div id="bottomFooter"></div>
+<script type="text/javascript" src="menu.js"></script>
+
+<style>
+body {
+	background-color: #800080;
+}
+
+#main-content {
+	margin: auto;
+	text-align: center;
+	width: 500px;
+}
+
+.featured-info form {
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #fff; 
+}
+
+h1,h2 {
+	font-family: Helvetica, sans-serif;
+	font-weight: 200;
+	color: #fff;
+}
+
+p {
+	font-family: Arial, sans-serif;
+}
+
+input {
+	width: 60%;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #b6b6b6;
+}
+
+textarea {
+	width: 60%;
+	height: 90px;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #b6b6b6;
+	font-family: Helvetica, sans-serif;
+}
+
+#privacy-policy {
+	width: 60%;
+	margin: auto;
+	font-size: 14px;
+}
+
+#bottomFooter {
+	margin-top: 20px;
+}
+
+.footer-container {
+	color: #959595;
+}
+
+.footer-container a{
+	color: #d7d7d7;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+form button {
+background-color: #ed8400;
+color: #fff;
+border-radius: 3px;
+padding: 5px 10px;
+border: none;
+}
+
+@media (max-width: 480px) {
+	input {width: 80%;}
+	textarea {width: 80%;}
+	#privacy-policy {width: 100%;}
+}
+</style>
+</body>
+</html>

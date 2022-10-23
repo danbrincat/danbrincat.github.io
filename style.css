@@ -69,8 +69,7 @@ p {
 }
 
 #prog {
-	height:5px;
-	width:25%;
+	height: 5px;
 	background-color: #eacda3;
 	transition: width 1s;
 	transition-timing-function: ease-out;
@@ -307,7 +306,7 @@ button.next:hover {
 
 #startQ .next {
 	margin: 0;
-	padding: 40px 5px;
+	padding: 60px 40px;
 }
 
 .question label {
@@ -318,8 +317,13 @@ button.next:hover {
 	padding: 20px;
 }
 
+#quizPanel {
+    padding: 0 10px 30px 10px;
+}
+
 #infoSect {
 	padding: 30px;
+	margin: 30px 10px;
 }
 
 #infoSect img {
