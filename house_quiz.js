@@ -1,10 +1,23 @@
 //MAIN SCRIPT FOR HOUSE QUIZ
-// LAST UPDATED: 44857
+// LAST UPDATED: 44858
 
 grf = 0
 sly = 0
 huf = 0
 rav = 0
+backup_results = 0
+backup_descrip = 0
+backup_chckbrd = 0
+
+// results display
+grf_result = "GRYFFINDOR";
+grf_descrip = "<span>\"You might belong in Gryffindor, Where dwell the brave at heart, Their daring, nerve, and chivalry Set Gryffindors apart.\"</span><br><br>The Gryffindor house emphasised the traits of courage as well as \"daring, nerve, and chivalry\", and thus its members were generally regarded as brave, though sometimes to the point of recklessness. Some Gryffindors had also been noted to be short-tempered.<br><br>Notably, Gryffindor house contributed many members to Dumbledore's Army and the Order of the Phoenix, although this may have been because the main members made it a point not to associate with other houses.<br><br>According to Phineas Nigellus Black, members of other houses, particularly Slytherin, sometimes felt that Gryffindors engaged in \"pointless heroics\". Another Slytherin, Severus Snape, considered many Gryffindors to be self-righteous and arrogant, with no regard for rules.";
+sly_result = "SLYTHERIN";
+sly_descrip = "<span>\"Or perhaps in Slytherin, You'll make your real friends, Those cunning folk use any means, To achieve their ends.\"</span><br><br>Slytherins tended to be ambitious, shrewd, cunning, strong leaders, and achievement-oriented. They also had highly developed senses of self-preservation. This means that Slytherins tended to hesitate before acting, so as to weigh all possible outcomes before deciding exactly what should be done.<br><br>According to Albus Dumbledore, the qualities which Salazar valued in the students he had chosen included cleverness, resourcefulness, determination, and \"a certain disregard for the rules\". Dumbledore noted that all of these were qualities possessed by Harry Potter, who was a Gryffindor but was almost placed in Slytherin.<br><br>Slytherins tended to take charge and possessed strong leadership skills. They were often self-assured and confident of their own competence and can be very loyal.";
+huf_result = "HUFFLEPUFF";
+huf_descrip = "<span>\"You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, And unafraid of toil.\"</span><br><br>Students belonging to this house were known to be hard-working, friendly, loyal, honest and rather impartial. It might be that due to their values, Hufflepuffs were not as competitive as the other houses, and were more modest about their accomplishments. Hufflepuff was the most inclusive among the four houses; valuing hard work, dedication, patience, loyalty, and fair play rather than a particular aptitude in its students.<br><br>Hufflepuffs were known to have a strong moral code, and a sense of right and wrong. Hufflepuffs were usually accepting of everyone. Students in Hufflepuff were known to value everyone and treat them as equal.<br><br>Hufflepuff appeared to have the least rivalry with the other houses, except in Quidditch, although the Triwizard Tournament did temporarily put a great deal of strain on the relationship between Gryffindor and Hufflepuff, due to unusual circumstances of the selection of both Gryffindor student Harry Potter and Hufflepuff student Cedric Diggory as champions. This was mended by 1998, where a majority of Hufflepuffs rose to defend Harry from Pansy Parkinson and later helped to defend Hogwarts.";
+rav_result = "RAVENCLAW";
+rav_descrip = "<span>\"Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind.\"</span><br><br>Ravenclaw House prized learning, wisdom, wit, and intellect in its members. Thus, many Ravenclaws tended to be academically motivated and talented students. They also prided themselves on being original in their ideas, and methods. It was not unusual to find Ravenclaw students practising especially different types of magic that other houses might shun.<br><br>Often hard-working and diligent, as often was the case with intellectuals with a predisposition for academics, some of the pupils sorted under the blue-bronzed eagle were known to be inclined to dismiss certain social expectations for the sake of satisfying their own intellectual curiosity. Some of these eventually also ended up being not only accepted but even celebrated, in spite of being initially subjected to scorn for their various oddities.<br><br>Ravenclaws tended to be curious about the world and paid attention to the world around them. Ravenclaws were known to be logical and rational. In addition, Ravenclaw students tended to have abilities regarding Memory.";
 
 //start quiz
 function startQ() {
@@ -41,6 +54,8 @@ return
 };
 q1.classList.add("hidden");
 q2.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "16.6666666666667%";
 }
 
@@ -67,6 +82,8 @@ return
 };
 q2.classList.add("hidden");
 q3.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "25%";
 }
 
@@ -93,6 +110,8 @@ return
 };
 q3.classList.add("hidden");
 q4.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "33.3333333333333%";
 }
 
@@ -119,6 +138,8 @@ return
 };
 q4.classList.add("hidden");
 q5.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "41.6666666666667%";
 }
 
@@ -145,6 +166,8 @@ return
 };
 q5.classList.add("hidden");
 q6.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "50%";
 }
 
@@ -171,6 +194,8 @@ return
 };
 q6.classList.add("hidden");
 q7.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "58.3333333333333%";
 }
 
@@ -197,6 +222,8 @@ return
 };
 q7.classList.add("hidden");
 q8.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "66.6666666666667%";
 }
 
@@ -223,6 +250,8 @@ return
 };
 q8.classList.add("hidden");
 q9.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "75%";
 }
 
@@ -249,6 +278,8 @@ return
 };
 q9.classList.add("hidden");
 q10.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "83.3333333333333%";
 }
 
@@ -275,6 +306,8 @@ return
 };
 q10.classList.add("hidden");
 q11.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "91.6666666666667%";
 }
 
@@ -301,6 +334,8 @@ return
 };
 q11.classList.add("hidden");
 q12.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 prog.style.width = "100%";
 }
 
@@ -316,12 +351,24 @@ var prog = document.getElementById('prog');
 var progBar = document.getElementById("prog-Bar");
 if (q12A.checked) {
 rav += 5;
+backup_results = rav_result;
+backup_descrip = rav_descrip;
+backup_chckbrd = "rav";
 } else if (q12B.checked) {
 sly += 5;
+backup_results = sly_result;
+backup_descrip = sly_descrip;
+backup_chckbrd = "sly";
 } else if (q12C.checked) {
 huf += 5;
+backup_results = huf_result;
+backup_descrip = huf_descrip;
+backup_chckbrd = "huf";
 } else if (q12D.checked) {
 grf += 5;
+backup_results = grf_result;
+backup_descrip = grf_descrip;
+backup_chckbrd = "grf";
 } else {
 alert("Please choose an option");
 return
@@ -329,6 +376,8 @@ return
 progBar.classList.add("hidden");
 q12.classList.add("hidden");
 results.classList.remove("hidden");
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 quizGo()
 }
 
@@ -343,25 +392,26 @@ console.log("Ravenclaw = " + rav);
 
 var chckbrd = document.getElementById("results");
 
-if (grf > rav && grf > sly && grf > huf) {
+if (grf > sly && grf > huf && grf > rav) {
 chckbrd.classList.add("grf");
-result = "GRYFFINDOR";
-descrip = "<span>\"You might belong in Gryffindor, Where dwell the brave at heart, Their daring, nerve, and chivalry Set Gryffindors apart.\"</span><br><br>The Gryffindor house emphasised the traits of courage as well as \"daring, nerve, and chivalry\", and thus its members were generally regarded as brave, though sometimes to the point of recklessness. Some Gryffindors had also been noted to be short-tempered.<br><br>Notably, Gryffindor house contributed many members to Dumbledore's Army and the Order of the Phoenix, although this may have been because the main members made it a point not to associate with other houses.<br><br>According to Phineas Nigellus Black, members of other houses, particularly Slytherin, sometimes felt that Gryffindors engaged in \"pointless heroics\". Another Slytherin, Severus Snape, considered many Gryffindors to be self-righteous and arrogant, with no regard for rules.";
+result = grf_result;
+descrip = grf_descrip;
+} else if (sly > grf && sly > huf && sly > rav) {
+chckbrd.classList.add("sly");
+result = sly_result;
+descrip = sly_descrip;
+} else if (huf > grf && huf > sly && huf > rav) {
+chckbrd.classList.add("huf");
+result = huf_result;
+descrip = huf_descrip;
 } else if (rav > grf && rav > sly && rav > huf) {
 chckbrd.classList.add("rav");
-result = "RAVENCLAW";
-descrip = "<span>\"Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind.\"</span><br><br>Ravenclaw House prized learning, wisdom, wit, and intellect in its members. Thus, many Ravenclaws tended to be academically motivated and talented students. They also prided themselves on being original in their ideas, and methods. It was not unusual to find Ravenclaw students practising especially different types of magic that other houses might shun.<br><br>Often hard-working and diligent, as often was the case with intellectuals with a predisposition for academics, some of the pupils sorted under the blue-bronzed eagle were known to be inclined to dismiss certain social expectations for the sake of satisfying their own intellectual curiosity. Some of these eventually also ended up being not only accepted but even celebrated, in spite of being initially subjected to scorn for their various oddities.<br><br>Ravenclaws tended to be curious about the world and paid attention to the world around them. Ravenclaws were known to be logical and rational. In addition, Ravenclaw students tended to have abilities regarding Memory.";
-} else if (sly > grf && sly > rav && sly > huf) {
-chckbrd.classList.add("sly");
-result = "SLYTHERIN";
-descrip = "<span>\"Or perhaps in Slytherin, You'll make your real friends, Those cunning folk use any means, To achieve their ends.\"</span><br><br>Slytherins tended to be ambitious, shrewd, cunning, strong leaders, and achievement-oriented. They also had highly developed senses of self-preservation. This means that Slytherins tended to hesitate before acting, so as to weigh all possible outcomes before deciding exactly what should be done.<br><br>According to Albus Dumbledore, the qualities which Salazar valued in the students he had chosen included cleverness, resourcefulness, determination, and \"a certain disregard for the rules\". Dumbledore noted that all of these were qualities possessed by Harry Potter, who was a Gryffindor but was almost placed in Slytherin.<br><br>Slytherins tended to take charge and possessed strong leadership skills. They were often self-assured and confident of their own competence and can be very loyal.";
-} else if (huf > grf && huf > rav && huf > sly) {
-chckbrd.classList.add("huf");
-result = "HUFFLEPUFF";
-descrip = "<span>\"You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, And unafraid of toil.\"</span><br><br>Students belonging to this house were known to be hard-working, friendly, loyal, honest and rather impartial. It might be that due to their values, Hufflepuffs were not as competitive as the other houses, and were more modest about their accomplishments. Hufflepuff was the most inclusive among the four houses; valuing hard work, dedication, patience, loyalty, and fair play rather than a particular aptitude in its students.<br><br>Hufflepuffs were known to have a strong moral code, and a sense of right and wrong. Hufflepuffs were usually accepting of everyone. Students in Hufflepuff were known to value everyone and treat them as equal.<br><br>Hufflepuff appeared to have the least rivalry with the other houses, except in Quidditch, although the Triwizard Tournament did temporarily put a great deal of strain on the relationship between Gryffindor and Hufflepuff, due to unusual circumstances of the selection of both Gryffindor student Harry Potter and Hufflepuff student Cedric Diggory as champions. This was mended by 1998, where a majority of Hufflepuffs rose to defend Harry from Pansy Parkinson and later helped to defend Hogwarts.";
+result = rav_result;
+descrip = rav_descrip;
 } else {
-result = "Oh No!";
-desrip = "Somethings Gone Wrong!";
+chckbrd.classList.add(backup_chckbrd);
+result = backup_results;
+descrip = backup_descrip;
 };
 
 document.getElementById("result-display").innerHTML = result;
